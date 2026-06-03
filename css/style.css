@@ -176,7 +176,7 @@ nav ul li a:hover {
 .hero-img-side {
     position: absolute;
     inset: 0;
-    background: url("img/hero-sfondo.jpg") center/cover no-repeat;
+    background: url("../img/hero-sfondo.jpg") center/cover no-repeat;
 }
 
 /* Contenuto testo */

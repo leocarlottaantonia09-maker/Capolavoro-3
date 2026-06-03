@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CrochetLAB Home</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- font -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Delius&family=DynaPuff:wght@400..700&display=swap');
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <nav>
+            <!-- barra di ricerca -->
+            <form>
+                <input type="search" placeholder="Cerca..." class="search-bar">
+                <button class="search-button">vai</button>
+            </form>
+
+            <!-- mette l'immagine vettoriale di una lente di ingrandimento al posto della barra di ricerca -->
+            <div class="nav-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-search">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M3 10a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
+                    <path d="M21 21l-6 -6" />
+                </svg>
+            </div>
+
+            <!-- logo del mio sito -->
+            <img src="img/logogemini.png" alt="CrochetLAB">
+
+            <!-- lista con la scritta che si vede di default -->
+            <ul>
+                <li><a href="index.html" lang="en">Home</a></li>
+                <li><a href="prodotti.html">Prodotti</a></li>
+                <li><a href="#Contatti">Contatti</a></li>
+                <li><a href="log-in.html" lang="en">Log-in</a></li>
+            </ul>
+
+            <!-- icona della home -->
+            <a href="index.html" class="nav-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-home">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M5 12l-2 0l9 -9l9 9l-2 0" />
+                    <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+                    <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+                </svg>
+            </a>
+
+            <!-- icona dei prodotti -->
+            <a href="prodotti.html" class="nav-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-menu-2">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M4 6l16 0" />
+                    <path d="M4 12l16 0" />
+                    <path d="M4 18l16 0" />
+                </svg>
+            </a>
+
+
+            <!-- icona del messaggio -->
+            <a href="#Contatti" class="nav-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-message">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M8 9h8" />
+                    <path d="M8 13h6" />
+                    <path d="M18 4a3 3 0 0 1 3 3v8a3 3 0 0 1 -3 3h-5l-5 3v-3h-2a3 3 0 0 1 -3 -3v-8a3 3 0 0 1 3 -3h12" />
+                </svg>
+            </a>
+
+            <!-- icona del login -->
+            <a href="log-in.html" class="nav-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-user">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" />
+                    <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+                </svg>
+            </a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <div class="hero" title="Foto di Paul Hanaoka su Unsplash">
+                <div class="hero-img-side"></div>
+                <div class="hero-gradient"></div>
+
+                <div class="hero-content">
+                    <p class="hero-eyebrow">Fatto a mano con amore</p>
+                    <h1 class="hero-title">
+                        ogni punto racconta<br>
+                        <em>la tua storia</em>
+                        <span class="sparkle">✦</span>
+                    </h1>
+                </div>
+            </div>
+
+            <!-- barra inferiore -->
+            <div class="hero-bar">
+
+                <!-- Pill 1: Artigianalità -->
+                <div class="name">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="icon icon-tabler icons-tabler-outline icon-tabler-sock">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path
+                            d="M13 3v6l4.798 5.142a4 4 0 0 1 -5.441 5.86l-6.736 -6.41a2 2 0 0 1 -.621 -1.451v-9.141h8" />
+                        <path d="M7.895 15.768c.708 -.721 1.105 -1.677 1.105 -2.768a4 4 0 0 0 -4 -4" />
+                    </svg>
+                    Artigianalità
+                </div>
+
+                <!-- Pill 2: Creatività -->
+                <div class="name">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="currentColor" class="icon icon-tabler icons-tabler-filled icon-tabler-sparkles">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path
+                            d="M16 19a1 1 0 0 1 0 -2a1 1 0 0 0 1 -1c0 -1.333 2 -1.333 2 0a1 1 0 0 0 1 1c1.333 0 1.333 2 0 2a1 1 0 0 0 -1 1c0 1.333 -2 1.333 -2 0a1 1 0 0 0 -1 -1" />
+                        <path
+                            d="M3 11a5 5 0 0 0 5 -5c0 -1.333 2 -1.333 2 0a5 5 0 0 0 5 5c1.333 0 1.333 2 0 2a5 5 0 0 0 -5 5a1 1 0 0 1 -2 0a5 5 0 0 0 -5 -5c-1.333 0 -1.333 -2 0 -2" />
+                        <path
+                            d="M16 7a1 1 0 0 1 0 -2a1 1 0 0 0 1 -1c0 -1.333 2 -1.333 2 0a1 1 0 0 0 1 1c1.333 0 1.333 2 0 2a1 1 0 0 0 -1 1c0 1.333 -2 1.333 -2 0a1 1 0 0 0 -1 -1" />
+                    </svg>
+                    Creatività
+                </div>
+
+                <!-- Pill 3: Unicità -->
+                <div class="name">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="icon icon-tabler icons-tabler-outline icon-tabler-mood-heart">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M21 12a9 9 0 1 0 -8.012 8.946" />
+                        <path d="M9 10h.01" />
+                        <path d="M15 10h.01" />
+                        <path d="M9.5 15a3.59 3.59 0 0 0 2.774 .99" />
+                        <path
+                            d="M18.994 21.5l2.518 -2.58a1.74 1.74 0 0 0 .004 -2.413a1.627 1.627 0 0 0 -2.346 -.005l-.168 .172l-.168 -.172a1.627 1.627 0 0 0 -2.346 -.004a1.74 1.74 0 0 0 -.004 2.412l2.51 2.59" />
+                    </svg>
+                    Unicità
+                </div>
+            </div>
+        </section>
+
+        <section class="bestseller">
+
+            <!-- Intestazione -->
+            <div class="inner">
+                <p>✦ I più amati ✦</p>
+                <h2>I Nostri <span lang="en">Bestseller</span></h2>
+                <p>Scelti con cura, realizzati a mano punto dopo punto.</p>
+            </div>
+
+            <!-- Card prodotti -->
+            <div class="cards-grid">
+
+                <!-- Card 1 -->
+                <div class="card">
+                    <img class="card-img" src="img/clutch-rosa.png" alt="Clutch Bag rosa">
+                    <div class="card-body">
+                        <h3 class="card-category">Borsa</h3>
+                        <p class="card-name" lang="en">Clutch Bag</p>
+                        <p class="card-desc"><span lang="en">Clutch</span> a mano <strong>color rosa antico</strong>,
+                            l'accessorio perfetto per aggiungere un tocco di classe intramontabile ogni tuo <span
+                                lang="en">outfit</span>.</p>
+                        <div class="card-footer">
+                            <p class="card-price">€49</p>
+                            <button class="card-btn" title="Add to cart">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="card" data-category="estate">
+                    <img class="card-img" src="img/top-marroncino.png" alt="Top estivo marroncino">
+                    <div class="card-body">
+                        <h3 class="card-category">Estate</h3>
+                        <p class="card-name" lang="en">Summer Top</p>
+                        <p class="card-desc"><span lang="en">Top</span> estivo <strong>marroncino</strong>. Adatto per
+                            le calde sere di agosto.
+                        </p>
+                        <div class="card-footer">
+                            <p class="card-price">€35</p>
+                            <button class="card-btn" title="Add to cart">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="card">
+                    <img class="card-img" src="img/maglione.png" alt="Maglione invernale a stisce">
+                    <div class="card-body">
+                        <h3 class="card-category">Inverno</h3>
+                        <p class="card-name">Maglione invernale</p>
+                        <p class="card-desc">Il maglioe è fatto da <strong>strisce bianche e blu</strong>. Avvolgente e
+                            morbidissimo, questo maglione in lana è il compagno ideale per le giornate fredde.</p>
+                        <div class="card-footer">
+                            <p class="card-price">€39</p>
+                            <button class="card-btn" title="Add to cart">+</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Pulsante principale -->
+            <a href="prodotti.html" class="view-all">Vedi tutti i prodotti &rarr;</a>
+
+        </section>
+
+        <!-- Categorie -->
+        <section>
+            <div class="cat-grid" id="about-us">
+                <div class="cat-card">
+                    <p class="cat-icon">🪴</p>
+                    <p class="cat-txt">Tutti i prpdotti utilizzati sono totalmente <strong>ecosostenibili</strong>.</p>
+                </div>
+                <div class="cat-card">
+                    <p class="cat-icon">🚚</p>
+                    <p class="cat-txt">La spediozione avviene tranite <strong>mezzi elettrici</strong> o che producono
+                        le minime emissioni posisbili.</p>
+                </div>
+                <div class="cat-card">
+                    <p class="cat-icon">📦</p>
+                    <p class="cat-txt"><span lang="en">Packaging</span> curato e <strong
+                            lang="en">plastic-free</strong>, perfetto per un regalo speciale e gentile con il
+                        pianeta.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recenzioni -->
+        <section id="Recenzioni">
+            <div class="container">
+                <div class="inner">
+                    <p lang="en">✦ Kind Words ✦</p>
+                    <h2>Cosa Dicono i Clienti</h2>
+                </div>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p>"La borsa più bella che abbia mai avuto. La qualità è incredibile ed è arrivata in tempi
+                            brevissimi, con una confezione deliziosa."</p>
+                        <span>— Sofia R., Milano</span>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p>"Ho ordinato un colore personalizzato per il compleanno di mia figlia e l'hanno azzeccato
+                            alla perfezione. Ordinerò di nuovo molto presto!"</p>
+                        <span>— Margot D., Parigi</span>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p>"Il mio top all'uncinetto riceve complimenti ogni volta che lo indosso. La gente non riesce a
+                            credere che sia fatto a mano.
+                            Ne vale assolutamente la pena."</p>
+                        <span>— Aine B., Dublino</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sconto -->
+        <section class="newsletter" id="Contatti">
+            <div class="container">
+                <div class="inner">
+                    <p>✦ Stay in the Loop ✦</p>
+                    <h2>Unisciti alla nostra community</h2>
+                    <p>Nuovi arrivi, retroscena e il 10% di sconto sul tuo primo ordine.</p>
+                    <div class="newsletter-form">
+                        <input type="email" placeholder="your@email.com">
+                        <button>Iscritviti</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+            <div class="fl-inner">
+                <div class="fl-top">
+                    <div class="fl-brand">
+                        <img src="img/logogemini.png" alt="CrochetLab Logo">
+                        <p>Capi all'uncinetto realizzati a mano, lentamente e con amore, in Italia.</p>
+                        <div class="social-row">
+                            <a class="soc-btn" title="@CrochetLAB" lang="en">Instagram</a>
+                            <a class="soc-btn" title="@CrochetLAB" lang="en">Pinterest</a>
+                            <a class="soc-btn" title="@CrochetLAB" lang="en">TikTok</a>
+                        </div>
+                    </div>
+
+                    <div class="fl-col">
+                        <h3>Studio</h3>
+                        <ul>
+                            <li><a href="#about-us" lang="en">About Us</a></li>
+                            <li><a href="#Contatti">Contati</a></li>
+                            <li><a href="#Recenzioni">Recenzioni</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="fl-col">
+                        <h3>Contatti</h3>
+                        <ul>
+                            <li>Scrivi attraverso il form nella pagina contati oppure:</li>
+                            <li>hey@CrochetLab.com</li>
+                            <li>Lun/Ven dalle 9:00 alle 15:30</li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <div class="fl-bottom">
+                    <p>© 2025 CrochetLab · Made with ♥ in Italy · All rights reserved.</p>
+                    <div class="fl-legal">
+                        <a>Privacy Policy</a>
+                        <a>Cookie</a>
+                    </div>
+                </div>
+            </div>
+    </footer>
+
+</body>
+
+</html>

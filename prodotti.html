@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CrocherLAB Prodotti</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- font -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Delius&family=DynaPuff:wght@400..700&display=swap');
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <!-- barra di ricerca -->
+            <form>
+                <input type="search" placeholder="Cerca..." class="search-bar">
+                <button class="search-button">vai</button>
+            </form>
+
+            <!-- mette l'immagine vettoriale di una lente di ingrandimento al posto della barra di ricerca -->
+            <div class="nav-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-search">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M3 10a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
+                    <path d="M21 21l-6 -6" />
+                </svg>
+            </div>
+
+            <!-- logo del mio sito -->
+            <img src="img/logogemini.png" alt="CrochetLAB">
+
+            <!-- lista con la scritta che si vede di default -->
+            <ul>
+                <li><a href="index.html" lang="en">Home</a></li>
+                <li><a href="prodotti.html">Prodotti</a></li>
+                <li><a href="index.html">Contatti</a></li>
+                <li><a href="log-in.html" lang="en">Log-in</a></li>
+            </ul>
+
+            <!-- icona della home -->
+            <a href="index.html" class="nav-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-home">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M5 12l-2 0l9 -9l9 9l-2 0" />
+                    <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+                    <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+                </svg>
+            </a>
+
+            <!-- icona dei prodotti -->
+            <a href="prodotti.html" class="nav-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-menu-2">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M4 6l16 0" />
+                    <path d="M4 12l16 0" />
+                    <path d="M4 18l16 0" />
+                </svg>
+            </a>
+
+
+            <!-- icona del messaggio -->
+            <a href="index.html" class="nav-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-message">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M8 9h8" />
+                    <path d="M8 13h6" />
+                    <path d="M18 4a3 3 0 0 1 3 3v8a3 3 0 0 1 -3 3h-5l-5 3v-3h-2a3 3 0 0 1 -3 -3v-8a3 3 0 0 1 3 -3h12" />
+                </svg>
+            </a>
+
+            <!-- icona del login -->
+            <a href="log-in.html" class="nav-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-user">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" />
+                    <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+                </svg>
+            </a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="shop-container">
+            <div class="inner">
+                <h2>I Nostri Prodotti</h2>
+                <p>Fatti con amore ♥</p>
+            </div>
+
+            <div class="filter">
+                <ul>
+                    <li><button data-filter="tutti">• Tutti</button></li>
+                    <li><button data-filter="borse">• Borse</button></li>
+                    <li><button data-filter="estate">• Estate</button></li>
+                    <li><button data-filter="inverno">• Inverno</button></li>
+                    <li><button data-filter="accessori">• Accessori</button></li>
+                </ul>
+            </div>
+
+            <div class="results-bar">
+                <p lang="en">Showing <strong id="count">12</strong> products</p>
+            </div>
+
+            <div class="card-grid">
+
+                <!-- Clutch rosa -->
+                <div class="card" data-category="borse">
+                    <img class="card-img" src="img/clutch-rosa.png" alt="Clutch Bag rosa" title="Modificata con AI">
+                    <div class="card-body">
+                        <h3 class="card-category">Borsa</h3>
+                        <p class="card-name" lang="en">Clutch Bag</p>
+                        <p class="card-desc"><span lang="en">Clutch</span> a mano <strong>color rosa antico</strong>,
+                            l'accessorio perfetto per aggiungere un tocco di classe intramontabile ogni tuo <span
+                                lang="en">outfit</span>.</p>
+                        <div class="card-footer">
+                            <p class="card-price">€49</p>
+                            <button class="card-btn" title="Add to cart">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Top rosso -->
+                <div class="card" data-category="estate">
+                    <img class="card-img" src="img/top-rosso.png" alt="Top estivo rosso" title="Modificata con AI">
+                    <div class="card-body">
+                        <h3 class="card-category">Estate</h3>
+                        <p class="card-name" lang="en">Sumemr top</p>
+                        <p class="card-desc"><span lang="en">Top</span> estivo <strong lang="fr">bordeaux</strong>.
+                            Adatto per le calde sere di
+                            agosto.</p>
+                        <div class="card-footer">
+                            <p class="card-price">€35</p>
+                            <button class="card-btn" title="Add to cart">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Maglione -->
+                <div class="card" data-category="inverno">
+                    <img class="card-img" src="img/maglione.png" alt="Maglione invernale a stisce" title="Modificata con AI">
+                    <div class="card-body">
+                        <h3 class="card-category">Inverno</h3>
+                        <p class="card-name">Maglione invernale</p>
+                        <p class="card-desc">Il maglioe è fatto da <strong>strisce bianche e blu</strong>. Avvolgente e
+                            morbidissimo, questo maglione in lana è il compagno ideale per le giornate fredde.</p>
+                        <div class="card-footer">
+                            <p class="card-price">€39</p>
+                            <button class="card-btn" title="Add to cart">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cestino grande -->
+                <div class="card" data-category="accessori">
+                    <img class="card-img" src="img/cesto-grande.png" alt="Cestino Grande" title="Modificata con AI">
+                    <div class="card-body">
+                        <h3 class="card-category">Accessorio</h3>
+                        <p class="card-name" lang="en">Basket</p>
+                        <p class="card-desc">Organizza i tuoi spazi con un tocco di <span lang="en">design</span>
+                            scandinavo. Questo <span lang="en">basket</span> dalla forma tonda e dal <strong
+                                lang="fr">colore beige</strong> neutro si adatta perfettamente a ogni ambiente.</p>
+                        <div class="card-footer">
+                            <p class="card-price">€15</p>
+                            <button class="card-btn" title="Add to cart">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Borsa anelli oro bianca -->
+                <div class="card" data-category="borse">
+                    <img class="card-img" src="img/borsa-noemi.png" alt="Summer Bag" title="Modificata con AI">
+                    <div class="card-body">
+                        <h3 class="card-category">Borsa</h3>
+                        <p class="card-name" lang="en">Summer Bag</p>
+                        <p class="card-desc">Borsa di <strong>colore bianco con anelli oro</strong>. Perfetta se vuoi
+                            aggiungere una <span lang="en">vibe</span> estiva anche ai tuoi outfit più semplici</p>
+                        <div class="card-footer">
+                            <p class="card-price">€29</p>
+                            <button class="card-btn" title="Add to cart">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Top marroncino -->
+                <div class="card" data-category="estate">
+                    <img class="card-img" src="img/top-marroncino.png" alt="Top estivo marroncino" title="Modificata con AI">
+                    <div class="card-body">
+                        <h3 class="card-category">Estate</h3>
+                        <p class="card-name" lang="en">Summer Top</p>
+                        <p class="card-desc"><span lang="en">Top</span> estivo <strong>marroncino</strong>. Adatto per
+                            le calde sere di agosto.
+                        </p>
+                        <div class="card-footer">
+                            <p class="card-price">€35</p>
+                            <button class="card-btn" title="Add to cart">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Borsa anelli argento bordeaux -->
+                <div class="card" data-category="borse">
+                    <img class="card-img" src="img/borsa-mia.png" alt="Summer Bag" title="Modificata con AI">
+                    <div class="card-body">
+                        <h3 class="card-category">Borsa</h3>
+                        <p class="card-name" lang="en">Summer Bag</p>
+                        <p class="card-desc">Borsa di <strong>colore <span>bordeaux</span> con anelli argento</strong>.
+                            Perfetta se vuoi
+                            aggiungere una <span lang="en">vibe</span> estiva anche ai tuoi outfit più semplici</p>
+                        <div class="card-footer">
+                            <p class="card-price">€29</p>
+                            <button class="card-btn" title="Add to cart">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cestino Piccolo -->
+                <div class="card" data-category="accessori">
+                    <img class="card-img" src="img/cesto-piccolo.png" alt="Cestino Piccolo" title="Modificata con AI">
+                    <div class="card-body">
+                        <h3 class="card-category">Accessorio</h3>
+                        <p class="card-name" lang="en">Baket</p>
+                        <p class="card-desc">Organizza i tuoi spazi con un tocco di <span lang="en">design</span>
+                            scandinavo. Questo <span lang="en">basket</span> dalla forma tonda e dal <strong
+                                lang="fr">colore beige</strong> neutro si adatta perfettamente a ogni ambiente.</p>
+                        <div class="card-footer">
+                            <p class="card-price">€10</p>
+                            <button class="card-btn" title="Add to cart">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Borsa grigia -->
+                <div class="card" data-category="borse">
+                    <img class="card-img" src="img/borsa-grigia.png" alt="Estate Bag" title="Modificata con AI">
+                    <div class="card-body">
+                        <h3 class="card-category">Borsa</h3>
+                        <p class="card-name" lang="en">Everyday Bag</p>
+                        <p class="card-desc">Borsa di <strong>colore grigio</strong>. Perfetta per aggiungere un
+                            accesosro unico comodo e versatile su tutti gli <span lang="en">outfit</span>.
+                            Perfetta se vuoi
+                            aggiungere una <span lang="en">vibe</span> estiva anche ai tuoi outfit più semplici</p>
+                        <div class="card-footer">
+                            <p class="card-price">€29</p>
+                            <button class="card-btn" title="Add to cart">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Borsa bianca con catena -->
+                <div class="card" data-category="borse">
+                    <img class="card-img" src="img/borsa-giulia.png" alt="Chain Bag" title="Modificata con AI">
+                    <div class="card-body">
+                        <h3 class="card-category">Borsa</h3>
+                        <p class="card-name" lang="en">Cloudy Chain Bag</p>
+                        <p class="card-desc">Borsa di <strong>colore bianca con catena argento</strong>. Perfetta per
+                            chi cerca un accessorio unico che non passi inosservato.</p>
+                        <div class="card-footer">
+                            <p class="card-price">€29</p>
+                            <button class="card-btn" title="Add to cart">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cover tablet -->
+                <div class="card" data-category="accessori">
+                    <img class="card-img" src="img/accessorio-tablet.png" alt="Tablet Cover" title="Modificata con AI">
+                    <div class="card-body">
+                        <h3 class="card-category">Accessorio</h3>
+                        <p class="card-name" lang="en">Tablet Cover</p>
+                        <p class="card-desc">
+                            Custodia di colore <strong lang="fr">bordeaux</strong>. Una custodia in maglia chunky che
+                            unisce design contemporaneo e massima protezione.
+                        </p>
+                        <div class="card-footer">
+                            <p class="card-price">€19</p>
+                            <button class="card-btn" title="Add to cart">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Borsa grigia -->
+                <div class="card" data-category="borse">
+                    <img class="card-img" src="img/borsa-nonna.png" alt="Everyday Bag" title="Modificata con AI">
+                    <div class="card-body">
+                        <h3 class="card-category">Borsa</h3>
+                        <p class="card-name" lang="en">Everyday Bag</p>
+                        <p class="card-desc">Borsa di <strong>colore <span lang="fr">beige</span></strong>. Perfetta per aggiungere un
+                            accesosro unico comodo e versatile su tutti gli <span lang="en">outfit</span>.
+                            Perfetta se vuoi
+                            aggiungere una <span lang="en">vibe</span> estiva anche ai tuoi outfit più semplici</p>
+                        <div class="card-footer">
+                            <p class="card-price">€29</p>
+                            <button class="card-btn" title="Add to cart">+</button>
+                        </div>
+                    </div>
+                </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="fl">
+            <div class="fl-inner">
+                <div class="fl-top">
+
+                    <div class="fl-brand">
+                        <img src="img/logogemini.png" alt="CrochetLab Logo">
+                        <p>Capi all'uncinetto realizzati a mano, lentamente e con amore, in Italia.</p>
+                        <div class="social-row">
+                            <a class="soc-btn" title="@CrochetLAB" lang="en">Instagram</a>
+                            <a class="soc-btn" title="@CrochetLAB" lang="en">Pinterest</a>
+                            <a class="soc-btn" title="@CrochetLAB" lang="en">TikTok</a>
+                        </div>
+                    </div>
+
+                    <div class="fl-col">
+                        <h3>Studio</h3>
+                        <ul>
+                            <li><a href="#about-us" lang="en">About Us</a></li>
+                            <li><a href="#Contatti">Contati</a></li>
+                            <li><a href="#Recenzioni">Recenzioni</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="fl-col">
+                        <h3>Contatti</h3>
+                        <ul>
+                            <li><a>Scrivi attraverso il form nella pagina contati oppure:</a></li>
+                            <li><a>hey@CrochetLab.com</a></li>
+                            <li><a>Lun/Ven dalle 9:00 alle 15:30</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <div class="fl-bottom">
+                    <p>© 2025 CrochetLab · Made with ♥ in Italy · All rights reserved.</p>
+                    <div class="fl-legal">
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Cookie</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../JS/script.js"></script>
+</body>
+
+</html>

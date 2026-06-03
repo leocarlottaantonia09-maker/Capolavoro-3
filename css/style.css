@@ -1,0 +1,877 @@
+:root {
+    --nightBordeaux: #661123;
+    --darkAmaranth: #75162D;
+    --burntRose: #95474A;
+    --cinnamonWood: #95474A;
+    --sandyClay: #D3A984;
+    --tan: #E3C192;
+    --wheat: #F2DFB3;
+    --pearlBeige1: #F2E5C6;
+    --pearlBeige2: #F2E2BD;
+
+    --radius: 12px;
+    --transition: 0.28s cubic-bezier(.4, 0, .2, 1);
+
+    --font-text: 'Delius', serif;
+    --font-title: 'DynaPuff', serif;
+
+    --shadow: rgba(74, 55, 40, 0.10);
+
+    --radius: 12px;
+}
+
+*,
+* ::after,
+* ::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--pearlBeige1);
+}
+
+a {
+    text-decoration: none;
+}
+
+.inner {
+    text-align: center;
+}
+
+.inner h2 {
+    font-family: var(--font-title);
+    font-size: 2.5rem;
+    color: var(--darkAmaranth);
+    margin: 20px 0;
+}
+
+.inner p {
+    color: var(--cinnamonWood);
+    font-family: var(--font-text);
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+/*======================================================
+                        NAV BAR                         
+======================================================*/
+
+header {
+    background-color: var(--pearlBeige2);
+    border-bottom: 1px solid var(--nightBordeaux);
+    /* queste tre permettono all'header di restare sopra mentre il resto scorre */
+    position: sticky;
+    /* questo mette l'header sopra a tutti gli atri elementi */
+    top: 0;
+    z-index: 999;
+}
+
+nav {
+    height: 80px;
+    display: flex;
+    /* mette in fila l'immagine e la lista*/
+    align-items: center;
+    /* centra verticalmente */
+    justify-content: space-between;
+    /*separa il logo e le varie opzioni*/
+    padding: 10px 20px;
+}
+
+nav form {
+    display: flex;
+}
+
+.search-bar {
+    padding: 8px 15px;
+    border: 1.5px solid var(--nightBordeaux);
+    /*arrotonda solo a sinistra*/
+    border-radius: var(--radius) 0 0 var(--radius);
+}
+
+/*serve per togliere la "x" blu quando si inizia a scrivere*/
+.search-bar::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+}
+
+.search-button {
+    padding: 8px 10px;
+    border: 1.5px solid var(--nightBordeaux);
+    /*arrotonda solo a destra*/
+    border-radius: 0 var(--radius) var(--radius) 0;
+    background-color: var(--sandyClay);
+    color: var(--darkAmaranth);
+    transition: var(--transition)
+}
+
+.search-button:hover {
+    background-color: var(--cinnamonWood);
+    color: var(--sandyClay);
+}
+
+.search-icon {
+    display: none;
+    /*nasconde l'icona della lente dii ngrandimento*/
+}
+
+nav img {
+    height: 70px;
+    width: auto;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+
+}
+
+nav ul li a {
+    color: var(--cinnamonWood);
+    font-family: var(--font-title);
+    font-size: 1.1rem;
+    margin-right: 30px;
+    padding: 5px 10px;
+    transition: var(--transition);
+}
+
+nav ul li a:hover {
+    border-radius: var(--radius);
+    background-color: var(--tan);
+}
+
+.nav-icon {
+    display: none;
+}
+
+/*======================================================
+                        HERO                         
+======================================================*/
+
+.hero {
+    position: relative;
+    width: auto;
+    height: 680px;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-radius: var(--radius) var(--radius) 0 0;
+    /*ciò che non entra nel rettangolo prestabilito viene nascosto*/
+    overflow: hidden;
+}
+
+/* Gradiente da sinistra */
+.hero-gradient {
+    position: absolute;
+    /* toglie tutti i bordi */
+    inset: 0;
+    /*crea un gradiente di colori semitrasparente sopra l'immagine e sotto la scritta*/
+    background: linear-gradient(to right,
+            rgba(102, 17, 35, 0.65) 0%,
+            rgba(117, 22, 45, 0.45) 40%,
+            rgba(149, 71, 74, 0.15) 70%,
+            transparent 85%);
+}
+
+/* Foto sfondo */
+.hero-img-side {
+    position: absolute;
+    inset: 0;
+    background: url("../IMG/hero-sfondo.jpg") center/cover no-repeat;
+}
+
+/* Contenuto testo */
+.hero-content {
+    position: relative;
+    /*mette il conteniuto da sopra allo sfondo*/
+    z-index: 2;
+    /*mette la scritta al centro (verticale)*/
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 30px;
+}
+
+.hero-content p {
+    font-family: var(--font-text);
+    /*mette maggiore spazio tra le lettere*/
+    letter-spacing: 0.18em;
+    /*tutto scritto in maiuscolo*/
+    text-transform: uppercase;
+    color: var(--tan);
+    margin-bottom: 10px;
+}
+
+.hero-content h1 {
+    font-family: var(--font-title);
+    font-size: 3rem;
+    line-height: 1.2;
+    /*sceglie dove andare a capo*/
+    color: var(--sandyClay);
+}
+
+.hero-content h1 em {
+    color: var(--nightBordeaux);
+}
+
+/* Emoji stelle analoghe all'originale */
+.sparkle {
+    display: inline;
+    color: var(--sandyClay);
+}
+
+.hero-bar {
+    /* le due sotto stabiliscono la grandezza della barra(ugiale al contenitore sopra) */
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background: var(--nightBordeaux);
+    /*arrotonda solo gli angoli in basso*/
+    border-radius: 0 0 var(--radius) var(--radius);
+    padding: 18px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.name {
+    display: flex;
+    /*li mette al centro verticalmente*/
+    align-items: center;
+    background: var(--sandyClay);
+    /*arrotonda i bordi creado due semicerchi ai lati*/
+    border-radius: 999px;
+    padding: 10px 20px;
+    font-family: var(--font-text);
+    color: var(--darkAmaranth);
+    transition: var(--transition)
+}
+
+.pill-icon {
+    /*stabilisce la grandezza dell'icona*/
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+/*======================================================
+                      BEST SELLER                        
+======================================================*/
+
+.bestseller {
+    padding: 50px 0;
+    /*mette il testo al centro*/
+    text-align: center;
+}
+
+/* ── GRIGLIA CARD  ── */
+.cards-grid {
+    display: grid;
+    /*crea tre colonne, ogni elemento occupa una sola colonna ma se il contenuto interno è troppo grande, la colonna può restringersi fino a 0*/
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 30px;
+    margin: 0 60px;
+}
+
+/* Card */
+.card {
+    background: var(--pearlBeige2);
+    border: 1px solid var(--darkAmaranth);
+    border-radius: var(--radius);
+    /*ciò che è fuori dai borsi viene tagliato*/
+    overflow: hidden;
+    text-align: left;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 40px var(--shadow);
+}
+
+/* Immagine placeholder */
+.card-img {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Corpo card */
+.card-body {
+    padding: 20px;
+}
+
+.card-category {
+    font-size: 0.8rem;
+    font-family: var(--font-text);
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--burntRose);
+    margin-bottom: 5px;
+}
+
+.card-name {
+    font-family: var(--font-title);
+    font-size: 1.5rem;
+    color: var(--darkAmaranth);
+    margin-bottom: 10px;
+    line-height: 1.3;
+}
+
+.card-desc {
+    font-family: var(--font-text);
+    font-size: 0.8rem;
+    color: var(--burntRose);
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card-price {
+    font-family: var(--font-title);
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--darkAmaranth);
+}
+
+.card-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: var(--sandyClay);
+    color: var(--darkAmaranth);
+    border: 1px solid var(--nightBordeaux);
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.card-btn:hover {
+    background-color: var(--cinnamonWood);
+    color: var(--sandyClay);
+}
+
+/* ── PULSANTE PRINCIPALE ── */
+.view-all {
+    display: inline-flex;
+    margin-top: 50px;
+    padding: 10px 30px;
+    font-family: var(--font-title);
+    font-weight: 300;
+    color: var(--darkAmaranth);
+    font-size: 1.3rem;
+    border: 1.5px solid var(--nightBordeaux);
+    border-radius: var(--radius);
+    background-color: var(--sandyClay);
+    transition: color 0.5s;
+    transition: background 0.5s;
+}
+
+.view-all:hover {
+    background-color: var(--cinnamonWood);
+    color: var(--sandyClay);
+}
+
+/*======================================================
+                    CATEGORY                        
+======================================================*/
+
+.cat-grid {
+    display: grid;
+    /*crea 4 colonne*/
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    background: var(--tan);
+    padding: 2.5rem 0;
+    justify-content: space-between;
+}
+
+.cat-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 50px;
+    padding: 20px;
+    background: var(--pearlBeige2);
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: all var(--transition);
+    border: 1.5px solid transparent;
+}
+
+.cat-card:hover {
+    border-color: var(--nightBordeaux);
+    /*muove verso l'alto*/
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px var(--shadow);
+}
+
+.cat-icon {
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+.cat-txt {
+    font-weight: 500;
+    color: var(--darkAmaranth);
+    font-size: 1.2rem;
+    text-align: center;
+    font-family: var(--font-text);
+}
+
+/* =========================================
+                  TESTIMONIALS
+===========================================*/
+.container {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 25px;
+}
+
+.section-head {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.testimonial-card {
+    background: var(--wheat);
+    border-radius: var(--radius);
+    padding: 25px;
+    border: 1px solid var(--nightBordeaux);
+}
+
+.stars {
+    color: #e8a930;
+    margin-bottom: 15px;
+}
+
+.testimonial-card p {
+    color: var(--cinnamonWood);
+    font-family: var(--font-text);
+    font-style: italic;
+    margin-bottom: 15px;
+    line-height: 1.65;
+}
+
+.testimonial-card span {
+    font-weight: 300;
+    color: var(--nightBordeaux);
+    font-family: var(--font-title);
+}
+
+/* =========================================
+   NEWSLETTER
+   ========================================= */
+.newsletter {
+    background: var(--tan);
+    padding: 20px 0;
+}
+
+.newsletter-form {
+    display: flex;
+    gap: 10px;
+    max-width: 440px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.newsletter-form input {
+    padding: 15px 20px;
+    border-radius: 999px;
+    border: 1px solid var(--nightBordeaux);
+    font-size: 0.95rem;
+    background: var(--pearlBeige2);
+}
+
+.newsletter-form button {
+    background-color: var(--sandyClay);
+    border: 1px solid var(--nightBordeaux);
+    border-radius: 999px;
+    color: var(--darkAmaranth);
+    font-family: var(--font-text);
+    padding: 5px 30px;
+    transition: color 0.3s;
+    transition: background 0.3s;
+}
+
+.newsletter-form button:hover {
+    background-color: var(--cinnamonWood);
+    color: var(--sandyClay);
+}
+
+/*======================================================
+                   Pagina Prodotti                        
+======================================================*/
+.shop-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.filter ul {
+    list-style: none;
+}
+
+.filter ul li {
+    display: inline;
+    justify-content: space-between;
+}
+
+.filter ul li button {
+    background-color: var(--sandyClay);
+    color: var(--darkAmaranth);
+    border: 2px solid var(--nightBordeaux);
+    border-radius: var(--radius);
+    font-family: var(--font-title);
+    padding: 5px 15px;
+}
+
+.filter ul li button.active {
+    background-color: var(--cinnamonWood);
+    color: var(--sandyClay);
+}
+
+.results-bar {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--nightBordeaux);
+    margin-bottom: 25px;
+    font-family: var(--font-text);
+}
+
+.results-bar p {
+    font-size: 0.8rem;
+    color: var(--darkAmaranth);
+    /*aumenta leggermente lo spzio tra le lettere*/
+    letter-spacing: 0.05em;
+}
+
+.results-count p strong {
+    color: var(--nightBordeaux);
+    font-weight: 700;
+}
+
+.card-grid {
+    display: grid;
+    /*crea tre colonne, ogni elemento occupa una sola colonna ma se il contenuto interno è troppo grande, la colonna può restringersi fino a 0*/
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 30px;
+    margin: 30px 0;
+}
+
+/*======================================================
+                  Pagina Log-in e Sing-up                      
+======================================================*/
+.log-in {
+    max-width: 600px;
+    border: 3px solid var(--nightBordeaux);
+    border-radius: var(--radius);
+    margin: 50px auto;
+}
+
+.card-form {
+    align-items: center;
+    justify-content: center;
+    padding: 35px 40px;
+}
+
+.field {
+    margin-bottom: 25px;
+}
+
+.field label {
+    display: block;
+    margin-bottom: 5px;
+    font-family: var(--font-title);
+    color: var(--darkAmaranth);
+}
+
+.field input {
+    width: 100%;
+    padding: 10px 15px;
+    background: var(--wheat);
+    border: 1px solid var(--burntRose);
+    border-radius: var(--radius);
+    font-family: var(--font-text);
+    color: var(--cinnamonWood);
+    outline: none;
+    transition: var(--transition)
+}
+
+.btn-primary {
+    width: 100%;
+    padding: 10px;
+    background: var(--sandyClay);
+    color: var(--darkAmaranth);
+    border: 1px solid var(--nightBordeaux);
+    border-radius: var(--radius);
+    font-family: var(--font-title);
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: var(--transition)
+}
+
+.btn-primary:hover {
+    background-color: var(--cinnamonWood);
+    color: var(--sandyClay);
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    /* mette lo spazio tra le righe e il testo */
+    gap: 20px;
+    margin: 20px 0;
+    color: var(--muted);
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+}
+
+.divider p {
+    font-family: var(--font-text);
+    color: var(--cinnamonWood);
+}
+
+/* aggiunge qualcosa prima e dopo*/
+.divider::before,
+.divider::after {
+    /* crea elemento vuoto */
+    content: '';
+    /* Dice alle linee di espandersi per occupare tutto lo spazio disponibile. Grazie a questo, le linee si allungheranno automaticamente fino ai bordi del contenitore. */
+    flex: 1;
+    /* spessore della linea */
+    height: 1px;
+    /* colore della linea */
+    background: var(--burntRose);
+}
+
+.switch-msg {
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--burntRose);
+    font-family: var(--font-text);
+}
+
+.switch-msg a {
+    color: var(--darkAmaranth);
+    font-weight: 600;
+}
+
+.switch-msg a:hover {
+    text-decoration: underline;
+}
+
+.checkbox-row {
+    display: flex;
+    /* Crea uno spazio costante tra il quadratino e il testo */
+    gap: 10px;
+    /* Mantieni lo spazio rispetto al pulsante sotto */
+    margin-bottom: 25px;
+}
+
+.checkbox-row input[type="checkbox"] {
+    margin-top: 4px;
+    cursor: pointer;
+}
+
+.checkbox-row label {
+    font-family: var(--font-text);
+    color: var(--cinnamonWood);
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.checkbox-row label a {
+    color: var(--darkAmaranth);
+    font-weight: 600;
+}
+
+/*======================================================
+                        FOOTER                        
+======================================================*/
+footer {
+    background: var(--pearlBeige2);
+    color: var(--darkAmaranth);
+    border-top: 1px solid var(--nightBordeaux);
+}
+
+.fl-inner {
+    /*lascia i bordi ai lati*/
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.fl-top {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    /*divide il bolocco in 5 parti, il primo elemnto ne prende due, i restanti una sola*/
+    justify-content: space-between;
+    /*separa in modo unifome gli elmenti*/
+    padding: 64px 0;
+    /*mette i dello spazio sopra e sotto*/
+    border-bottom: 0.5px solid var(--darkAmaranth);
+    /*mette il bordo sotto*/
+}
+
+.fl-brand img {
+    display: block;
+    height: 50px;
+    width: auto;
+    margin-bottom: 20px;
+}
+
+.fl-brand p {
+    color: var(--cinnamonWood);
+    font-family: var(--font-text);
+    line-height: 1.7;
+    max-width: 260px;
+    margin-bottom: 26px;
+}
+
+.social-row {
+    display: flex;
+    /*una soecie di margine*/
+    gap: 10px;
+}
+
+.soc-btn {
+    padding: 5px 10px;
+    border: 1px solid var(--nightBordeaux);
+    border-radius: var(--radius);
+    color: var(--darkAmaranth);
+    font-family: var(--font-title);
+    background-color: var(--sandyClay);
+    cursor: pointer;
+    transition: color 0.3s;
+    transition: background 0.3s;
+}
+
+.soc-btn:hover {
+    background-color: var(--cinnamonWood);
+    color: var(--sandyClay);
+}
+
+.fl-col h3 {
+    color: var(--nightBordeaux);
+    font-family: var(--font-title);
+    margin-bottom: 20px;
+}
+
+.fl-col ul {
+    list-style: none;
+}
+
+.fl-col ul li,
+.fl-col ul li a {
+    margin-bottom: 10px;
+    color: var(--cinnamonWood);
+    font-family: var(--font-text);
+    transition: color 0.2s;
+}
+
+/*tutti questi permettono di mettere al centro la scritta(o melgio il contenivore con dentro la scritta*/
+.fl-bottom {
+    display: flex;
+    /*mette in linea le due scritte*/
+    align-items: center;
+    justify-content: space-between;
+    padding: 22px 0;
+}
+
+.fl-bottom p {
+    font-size: 12px;
+    /*mette la scirtta più piccola rispetto allo standard*/
+    color: var(--burntRose);
+}
+
+.fl-legal {
+    display: flex;
+    gap: 25px;
+}
+
+.fl-legal a {
+    font-size: 12px;
+    color: var(--burntRose);
+    transition: color 0.3s;
+}
+
+.fl-legal a:hover {
+    color: var(--sandyClay);
+}
+
+/*tutto questo gestisce qundo lo schermo è piccolo*/
+@media screen and (max-width: 768px) {
+    .cards-grid {
+        /*Le 3 colonne spariscono. Ora c'è una sola colonna. Gli elementi saranno uno sopra l'altro.*/
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .card-grid {
+        /*Le 3 colonne spariscono. Ora c'è una sola colonna. Gli elementi saranno uno sopra l'altro.*/
+        grid-template-columns: 1fr;
+    }
+
+    .cat-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .values-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .testimonials-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .fl-top {
+        grid-template-columns: 1fr 1fr;
+        gap: 32px;
+    }
+
+    .fl-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 840px) {
+
+    /*Tutto quello che scrivi qui dentro viene applicato 
+       SOLO quando lo schermo è largo 600px o meno*/
+    nav ul,
+    nav form {
+        display: none;
+    }
+
+    .nav-icon {
+        display: inline;
+        color: var(--darkAmaranth);
+        margin-right: 15px;
+        transition: color 0.3s;
+    }
+
+    .nav-icon:hover {
+        color: var(--sandyClay);
+    }
+
+}

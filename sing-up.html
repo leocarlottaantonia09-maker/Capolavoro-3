@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CrochetLAB Sing-up</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- font -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Delius&family=DynaPuff:wght@400..700&display=swap');
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <!-- barra di ricerca -->
+            <form>
+                <input type="search" placeholder="Cerca..." class="search-bar">
+                <button class="search-button">vai</button>
+            </form>
+
+            <!-- mette l'immagine vettoriale di una lente di ingrandimento al posto della barra di ricerca -->
+            <div class="nav-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-search">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M3 10a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
+                    <path d="M21 21l-6 -6" />
+                </svg>
+            </div>
+
+            <!-- logo del mio sito -->
+            <img src="img/logogemini.png" alt="CrochetLAB">
+
+            <!-- lista con la scritta che si vede di default -->
+            <ul>
+                <li><a href="index.html" lang="en">Home</a></li>
+                <li><a href="prodotti.html">Prodotti</a></li>
+                <li><a href="index.html">Contatti</a></li>
+                <li><a href="log-in.html" lang="en">Log-in</a></li>
+            </ul>
+
+            <!-- icona della home -->
+            <a href="index.html" class="nav-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-home">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M5 12l-2 0l9 -9l9 9l-2 0" />
+                    <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+                    <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+                </svg>
+            </a>
+
+            <!-- icona dei prodotti -->
+            <a href="prodotti.html" class="nav-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-menu-2">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M4 6l16 0" />
+                    <path d="M4 12l16 0" />
+                    <path d="M4 18l16 0" />
+                </svg>
+            </a>
+
+
+            <!-- icona del messaggio -->
+            <a href="index.html" class="nav-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-message">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M8 9h8" />
+                    <path d="M8 13h6" />
+                    <path d="M18 4a3 3 0 0 1 3 3v8a3 3 0 0 1 -3 3h-5l-5 3v-3h-2a3 3 0 0 1 -3 -3v-8a3 3 0 0 1 3 -3h12" />
+                </svg>
+            </a>
+
+            <!-- icona del login -->
+            <a href="log-in.html" class="nav-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-user">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" />
+                    <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+                </svg>
+            </a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="log-in">
+            <div class="inner">
+                <h2>Sing-up</h2>
+                <p>Unisicti alla nostra community</p>
+            </div>
+
+            <div class="card-form">
+                <div class="field">
+                    <label for="email">Nome</label>
+                    <input type="text" id="nome" placeholder="Nome" />
+                </div>
+
+                <div class="field">
+                    <label for="email">Cognome</label>
+                    <input type="text" id="cognome" placeholder="Cognome" />
+                </div>
+
+
+                <div class="field">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="nome@esempio.it" />
+                </div>
+
+                <div class="field">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Scegli la password" />
+                </div>
+
+                <div class="field">
+                    <label for="password">Conferma Password</label>
+                    <input type="password" id="confirm" placeholder="Ripeti la Password" />
+                </div>
+
+                <div class="checkbox-row">
+                    <input type="checkbox" id="terms" />
+                    <label for="terms">
+                        Accetto i <a href="#">Termini di servizio</a> e la <a href="#">Privacy Policy</a>
+                    </label>
+                </div>
+
+                <button class="btn-primary" onclick="handleSignup()">Crea account</button>
+
+                <div class="divider">
+                    <p>oppure</p>
+                </div>
+
+                <p class="switch-msg">
+                    Hai già un account?
+                    <a href="log-in.html">Torna al Log-in</a>
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="fl">
+            <div class="fl-inner">
+                <div class="fl-top">
+
+                    <div class="fl-brand">
+                        <img src="img/logogemini.png" alt="CrochetLab Logo">
+                        <p>Capi all'uncinetto realizzati a mano, lentamente e con amore, in Italia.</p>
+                        <div class="social-row">
+                            <a class="soc-btn" title="@CrochetLAB" lang="en">Instagram</a>
+                            <a class="soc-btn" title="@CrochetLAB" lang="en">Pinterest</a>
+                            <a class="soc-btn" title="@CrochetLAB" lang="en">TikTok</a>
+                        </div>
+                    </div>
+
+                    <div class="fl-col">
+                        <h3>Studio</h3>
+                        <ul>
+                            <li><a href="index.html" lang="en">About Us</a></li>
+                            <li><a href="index.html">Contati</a></li>
+                            <li><a href="index.html">Recenzioni</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="fl-col">
+                        <h3>Contatti</h3>
+                        <ul>
+                            <li><a>Scrivi attraverso il form nella pagina contati oppure:</a></li>
+                            <li><a>hey@CrochetLab.com</a></li>
+                            <li><a>Lun/Ven dalle 9:00 alle 15:30</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <div class="fl-bottom">
+                    <p>© 2025 CrochetLab · Made with ♥ in Italy · All rights reserved.</p>
+                    <div class="fl-legal">
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Cookie</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>
